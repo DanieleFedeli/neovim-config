@@ -16,11 +16,11 @@ call dein#begin('/Users/daniele/.cache/dein')
 call dein#add('/Users/daniele/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 " Add or remove your plugins here like this:
-call dein#add('nvim-treesitter/nvim-treesitter')
-call dein#add('Shougo/neosnippet-snippets')
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add('morhetz/gruvbox')
 call dein#add('tpope/vim-fugitive')
+call dein#add('preservim/nerdtree')
+call dein#add('ctrlpvim/ctrlp.vim')
 
 " Required:
 call dein#end()
@@ -36,4 +36,13 @@ endif
 
 "End dein Scripts------------------------
 
+"Editor setting
+map <silent> <C-n> :NERDTreeFocus<CR>
 colorscheme gruvbox
+set colorcolumn=100
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+set nowrap
+set hlsearch
+set tabstop=4 softtabstop=4
+set smartindent
+set expandtab
